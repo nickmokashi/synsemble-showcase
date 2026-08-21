@@ -56,9 +56,9 @@ That idea turned into Synsemble.
 
 Synsemble is under active development and testing.
 
-What works today: the organization, the staffing, the verification, the record, the building, the machine room, Claude Code and outside models as workers, failover between models, the away report.
+What works today: the organization, the staffing, the verification, the record, the building, the machine room, Claude Code and outside models as workers, a fleet of free models with failover and a measured record for each, the workspace with projects, chats and project memory, pictures and sound and video in and out, documents read as text, voice in and read-aloud, web search, and the away report.
 
-What is not finished: the dedicated workspace with projects and chat history, research workers that read the web, and measured track records for each model.
+What is not finished: reading PDFs, search across a whole folder of documents, and streaming replies.
 
 The core project is kept in a private repository while the software continues to be developed. This repository is the home for information, screenshots, development updates, and, later, trial builds.
 
