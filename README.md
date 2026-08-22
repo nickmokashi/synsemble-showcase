@@ -38,12 +38,22 @@ When they are working, they talk about the work: what it is, which provider is d
 * Shows your computer itself: hardware, drives, devices, running programs, and your files as a place you can work in safely
 * Runs a checkup with evidence, likely cause, what it could lead to, what to do, and what it will never do on its own
 * Has studios for writing, images, music, voice and video, each with its pipeline drawn and every human decision point marked
+* Reads what you have left at every provider that publishes it, works out the burn rate, says how many days it lasts, and warns once rather than once a check
+* Lets you type in a balance for a provider that publishes none, and labels it as yours
 * Recommends automations from what keeps happening, and never builds one behind your back
 * Works while you are away and reports what happened when you come back
 
 ![Provider Operations](shots/04-provider-operations.png)
 
-![The Engineering Bay](shots/05-engineering-bay.png)
+## What you have left, and how long it lasts
+
+Where a provider publishes what is left, Synsemble reads it, works out the pace from the readings themselves, and says how many days that gives you. Where a provider publishes nothing, it says so on the card instead of leaving a blank, and you can type in what you have; that figure is labelled as yours and never as the provider's.
+
+Every card has a **Test** button that asks the provider right now and reports exactly what came back: a real figure, a provider that publishes none, or a key that was refused. An empty card can always be explained.
+
+![What is left](shots/05-what-is-left.png)
+
+![The Engineering Bay](shots/06-engineering-bay.png)
 
 ## The three rules it lives by
 
@@ -59,9 +69,9 @@ Synsemble never holds an Anthropic login. Claude Code signs in on its own, and S
 
 Paid providers cannot spend a cent until you allow it on their card.
 
-![The Studios](shots/06-studios.png)
+![The Studios](shots/07-studios.png)
 
-![The Automation Factory](shots/07-automation-factory.png)
+![The Automation Factory](shots/08-automation-factory.png)
 
 ## Why I built it
 
@@ -75,9 +85,9 @@ Then I wanted the place to be the whole computer, so that nothing it does is hid
 
 That idea turned into Synsemble.
 
-![The Map](shots/08-map.png)
+![The Map](shots/09-map.png)
 
-![The Workspace](shots/09-workspace.png)
+![The Workspace](shots/10-workspace.png)
 
 ## Current status
 
@@ -85,14 +95,26 @@ Synsemble is under active development and testing.
 
 What works today: the organization, the staffing, the verification, the record, the living building with its hardware district, storage bays, dock, provider district, studios, automation wing and engineering bay, the agents talking, Claude Code and outside models as workers, a fleet of free models with failover and a measured record for each, routing modes and budgets, provider operations with balances where a provider reports one, the workspace with projects, chats, project memory and skills, pictures and sound and video in and out, documents read as text, voice in and read-aloud, web search, the file archive with safe operations, the checkup, workflows with recommendations, the map, and the away report.
 
+It is tested two ways. A unit suite runs the logic on its own and touches nothing real. A second suite starts the actual packaged application and drives it through the same interface the window uses: telemetry, devices, the safety refusals, the file archive, providers, workflows, a full objective, every panel, a restart, and the memory it uses while you hammer it. What that suite proves, it proves about the program you would install.
+
 What is not finished: search across a whole folder of documents, streaming for Claude Code replies, music generation (no provider is wired yet), and temperatures on machines whose firmware keeps them to itself.
 
 The core project is kept in a private repository while the software continues to be developed. This repository is the home for information, screenshots, development updates, and, later, trial builds.
 
 **This repository does not contain the private Synsemble source code.**
 
-![The Archive](shots/10-archive.png)
+![The Archive](shots/11-archive.png)
 
+## What changed lately
+
+Current build: **0.28.0** (2026-08-22). Every release is smoke-tested against the real packaged app before it is kept.
+
+* **0.28.0** QuotaSpring folded in (src/shared/balances.ts + src/main/balances.ts): what is left at each provider, the burn rate, how long it lasts, low-balance alerts raised once, and a figure you can type in yourself labelled user-entered. QuotaSpring never worked, and the reason was not parsing: an ordinary OpenRouter key with no spend cap reports limit_remaining: null, so there was no figure and no…
+* **0.27.0** the close x always works. Panels rebuilt their HTML eight times a second, so a real click held for ~120 ms lost its target between press and release and never fired: the x did nothing, at random. Rebuilds are now deferred while a pointer is held inside a panel. **And one copy at a time:** requestSingleInstanceLock, which is the actual root cause of the port dance, because two copies shared one…
+* **0.26.0** end-to-end checks against the REAL packaged app (tools/e2e-app.cjs, 47 checks over CDP: telemetry, devices, Guardian refusals, the Archive, providers, automation, an objective, the renderer) plus a test mode (--test-data-dir, --test-hidden, --no-hooks) so a test run can never touch Claude Code's settings. It immediately found a real bug: updateThread accepted skillId and threw it away, so…
+* **0.25.0** a worker on a project's objective stands in that project's room (renderer-side, from the objective's projectId); panels fit their content; the agents mention checkup findings and lines that ran.
+* **0.24.0** Engineering Bay (src/shared/diagnostics.ts, pure + tested: eight fields per finding, "not visible" is a finding), the Studios (studio-panel.ts: who can work where from what is connected, pipelines drawn with ◆ human checkpoints), the Automation Factory (src/shared/automation.ts rules + src/main/automation.ts engine; triggers on bus events/schedule/manual; steps never delete or overwrite;…
+* **0.23.0** Provider Operations: ledger.ts (every call's usage, persisted as ledger.json), five routing modes + budgets in provider.ts (RoutingPolicy; holds are shown, never silent), OpenRouter key balance every 10 min (source-labelled "provider API"; everyone else "local tracking"), provider events on the bus (stations glow with traffic, switches are announced), ops-panel.ts with the setup wizard from…
 ## Trial
 
 Not open yet.
