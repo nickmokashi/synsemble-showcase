@@ -24,8 +24,23 @@ When they are working, they talk about the work: what it is, which provider is d
 
 ![Agents talking](shots/03-agents-talking.png)
 
+## It knows what day it is
+
+Synsemble used to wait to be asked. Now it keeps a board.
+
+It remembers what you actually owe and when, tells that apart from what you merely want to do one day, and notices things worth raising on its own. When something is due tomorrow, it starts the half of the work that does not need you: gathering the context, checking what has already been decided, finding what is unresolved. Then it stops at the part that is yours and says so.
+
+The board has seven sections, and the last one matters more than it looks. **NOT TODAY** holds the things you have recognised and deliberately parked. An assistant that turns every remembered idea into pressure is worse than one that forgets.
+
+It speaks first only when there is a reason: something due, something finished, something waiting on you, something that ran out. Once, not every thirty seconds. A condition it has already raised does not come back unless it genuinely got worse, and something you dismissed never comes back at all. Quiet hours are respected by default.
+
+Nothing about this spends a model to work out the date. Days, deadlines, recurrence and thresholds are arithmetic.
+
 ## What Synsemble does
 
+* Keeps a board of what matters today, what it already did, and what is waiting on you
+* Starts the safe half of tomorrow's work by itself, and stops at the decision that is yours
+* Explains, in the record, why it started anything at all
 * Takes one objective and decides whether it deserves one worker or a small team
 * Tells you who it hired and why, before the work starts
 * Routes each job to the right lane, with five routing modes from Free only to Best available, and budgets that hold paid calls back and say so
@@ -99,7 +114,7 @@ It is tested three ways. A unit suite runs the logic on its own and touches noth
 
 The third one uses the mouse. It opens every panel and presses every control with real pointer events, held as long as a finger holds them, then reports anything covered by something else, drawn off screen, too small to hit, unreadable against its background, or simply doing nothing when pressed. It exists because the bugs that reach a person are rarely the ones an API test can see: the first run found a close button that had been drawn in the wrong corner of the window, five buttons that could never have worked because the dialog behind them does not exist in this framework, and a search box that pointed the camera at a room without opening it.
 
-What is not finished: search across a whole folder of documents, streaming for Claude Code replies, music generation (no provider is wired yet), and temperatures on machines whose firmware keeps them to itself.
+What is not finished: external calendars and mail as sources of commitments (the seam is there, and a calendar is one source among several rather than the shape everything bends to), search across a whole folder of documents, streaming for Claude Code replies, music generation (no provider is wired yet), and temperatures on machines whose firmware keeps them to itself.
 
 The core project is kept in a private repository while the software continues to be developed. This repository is the home for information, screenshots, development updates, and, later, trial builds.
 
@@ -109,7 +124,7 @@ The core project is kept in a private repository while the software continues to
 
 ## What changed lately
 
-Current build: **0.30.0** (2026-08-22). Every release is smoke-tested against the real packaged app before it is kept.
+Current build: **0.31.0** (2026-08-23). Every release is smoke-tested against the real packaged app before it is kept.
 
 * **0.30.0** **the panel in Nick's photograph.** The inspector was not docked to the right-hand side at all: it sat at the top-left with 12px of itself off the edge of the window. A rule added in 0.11.0 to give .panel-x a positioning context set .panel { position: relative }, which overrode .panel's own position: absolute. With relative positioning, top: 58px; right: 12px stops meaning "docked to the top…
 * **0.29.0** the bug hunt that clicks like a person (tools/ui-audit.cjs, npm run audit): it opens every panel and presses every control with real mouse events held at human speed, then reports COVERED, OFF-SCREEN, TINY, DEAD, UNREADABLE, CLIPPED and NOISY. Three real bugs on the first run. 1. **window.prompt does not exist in Electron; it throws.** New folder, Rename, New project, Rename project and Rename…
