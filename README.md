@@ -124,14 +124,14 @@ The core project is kept in a private repository while the software continues to
 
 ## What changed lately
 
-Current build: **0.37.0** (2026-08-24). Every release is smoke-tested against the real packaged app before it is kept.
+Current build: **0.39.0** (2026-08-24). Every release is smoke-tested against the real packaged app before it is kept.
 
+* **0.39.0** EVERYTHING IS PLUGGED IN. *"I want the rest of it done."* The seven modules that were built, tested and had no caller now have one. **895 unit tests.**
+* **0.38.0** THE REST OF THE PACKET'S RULES. Four more subsystems, built in parallel, none of them stubs. **804 unit tests.**
 * **0.37.0** THE PACKET, FOUNDATIONS FIRST. He reaffirmed it: *"I need the whole packet completed. Absolutely. To a 'T'."* So four subsystems were built in parallel, all pure, all heavily tested, none of them stubs. **625 unit tests, 61 end-to-end checks.**
 * **0.35.0** notes you can actually use, and the updater that must never run during a test.
 * **0.34.0** a backend that does not tell the truth about itself poisons everything above it.
 * **0.32.0** the morning Nick tried to connect a provider, and eight things were in the way. Every one came from him using the app for ten minutes.
-* **0.31.0** INITIATIVE: Synsemble speaks first. His packet: *"Synsemble is becoming extremely capable, but it is still too reactive... It should know what day it is, understand what is coming, remember commitments and intentions, notice unfinished work, begin safe preparatory work when appropriate, and approach the CEO when attention or approval is actually required."* Full spec:…
-* **0.30.0** **the panel in Nick's photograph.** The inspector was not docked to the right-hand side at all: it sat at the top-left with 12px of itself off the edge of the window. A rule added in 0.11.0 to give .panel-x a positioning context set .panel { position: relative }, which overrode .panel's own position: absolute. With relative positioning, top: 58px; right: 12px stops meaning "docked to the top…
 ## Trial
 
 Not open yet.
