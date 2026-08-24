@@ -124,14 +124,14 @@ The core project is kept in a private repository while the software continues to
 
 ## What changed lately
 
-Current build: **0.32.0** (2026-08-23). Every release is smoke-tested against the real packaged app before it is kept.
+Current build: **0.34.1** (2026-08-24). Every release is smoke-tested against the real packaged app before it is kept.
 
+* **0.34.0** a backend that does not tell the truth about itself poisons everything above it.
 * **0.32.0** the morning Nick tried to connect a provider, and eight things were in the way. Every one came from him using the app for ten minutes.
 * **0.31.0** INITIATIVE: Synsemble speaks first. His packet: *"Synsemble is becoming extremely capable, but it is still too reactive... It should know what day it is, understand what is coming, remember commitments and intentions, notice unfinished work, begin safe preparatory work when appropriate, and approach the CEO when attention or approval is actually required."* Full spec:…
 * **0.30.0** **the panel in Nick's photograph.** The inspector was not docked to the right-hand side at all: it sat at the top-left with 12px of itself off the edge of the window. A rule added in 0.11.0 to give .panel-x a positioning context set .panel { position: relative }, which overrode .panel's own position: absolute. With relative positioning, top: 58px; right: 12px stops meaning "docked to the top…
 * **0.29.0** the bug hunt that clicks like a person (tools/ui-audit.cjs, npm run audit): it opens every panel and presses every control with real mouse events held at human speed, then reports COVERED, OFF-SCREEN, TINY, DEAD, UNREADABLE, CLIPPED and NOISY. Three real bugs on the first run. 1. **window.prompt does not exist in Electron; it throws.** New folder, Rename, New project, Rename project and Rename…
 * **0.28.0** QuotaSpring folded in (src/shared/balances.ts + src/main/balances.ts): what is left at each provider, the burn rate, how long it lasts, low-balance alerts raised once, and a figure you can type in yourself labelled user-entered. QuotaSpring never worked, and the reason was not parsing: an ordinary OpenRouter key with no spend cap reports limit_remaining: null, so there was no figure and no…
-* **0.27.0** the close x always works. Panels rebuilt their HTML eight times a second, so a real click held for ~120 ms lost its target between press and release and never fired: the x did nothing, at random. Rebuilds are now deferred while a pointer is held inside a panel. **And one copy at a time:** requestSingleInstanceLock, which is the actual root cause of the port dance, because two copies shared one…
 ## Trial
 
 Not open yet.
