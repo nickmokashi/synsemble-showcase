@@ -124,7 +124,7 @@ The core project is kept in a private repository while the software continues to
 
 ## What changed lately
 
-Current build: **0.39.0** (2026-08-24). Every release is smoke-tested against the real packaged app before it is kept.
+Current build: **0.43.0** (2026-08-24). Every release is smoke-tested against the real packaged app before it is kept.
 
 * **0.39.0** EVERYTHING IS PLUGGED IN. *"I want the rest of it done."* The seven modules that were built, tested and had no caller now have one. **895 unit tests.**
 * **0.38.0** THE REST OF THE PACKET'S RULES. Four more subsystems, built in parallel, none of them stubs. **804 unit tests.**
