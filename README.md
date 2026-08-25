@@ -124,14 +124,14 @@ The core project is kept in a private repository while the software continues to
 
 ## What changed lately
 
-Current build: **0.53.0** (2026-08-25). Every release is smoke-tested against the real packaged app before it is kept.
+Current build: **0.54.0** (2026-08-25). Every release is smoke-tested against the real packaged app before it is kept.
 
+* **0.54.0** THE HOUSE CASTS ITS OWN SHADOW. Nick: *"get rid of the black silhouette that's shaped like a basic rectangle and make it look like an actual shadow."*
 * **0.53.0** ROOMS THAT LOOK LIKE THEIR JOB. The last gap in his brief: *"Rooms should no longer all look like identical colored trays. Their architecture, machinery, props, and shape should help communicate their purpose."*
 * **0.52.0** IT CAN PUT A VIDEO UNDER HIS AUDIO, AND THE HOUSE IS CELLS. **His question:** *"you are saying it cannot make a video based on a field note, but if I give it some music that has narration or people just talking, it can make a video UNDER that?"* It could not, and the reason was one missing capability rather than many. video.ts sends a text prompt to fal.ai and gets a SILENT clip; nothing took an…
 * **0.51.0** THE OTHER TWO, AND THEY ARE WIRED. Nick asked for the multi-step chains and the topic recommendations alongside the architecture work, so two agents built them in parallel while the house was being rebuilt. **Both are wired the same day**, because this project has twice built something good and left it unreachable - notes in 0.34.0, rescued in 0.35.0, and seven modules with no caller until 0.39.0…
 * **0.50.0** IT HAS HEIGHT NOW. Nick, on 0.49.0: *"This still doesn't have height."* He was right, and the arithmetic says why: a storey lifted a floor 96 pixels and a room's walls were **26** pixels tall, so every floor was a thin plate with seventy pixels of empty air above it. Stacked plates separated by air read as scattered tiles; in the concept a storey is a solid slab of room and that continuous mass…
 * **0.49.0** THE WORLD BECOMES THREE-DIMENSIONAL. Nick, on 0.48.0: *"The current result is still fundamentally the old flat room-grid system, just spread out into floating strips... Do not keep rearranging room coordinates."* He was right, and the cause was a rule I wrote in 0.48.0 and should not have: **districts never overlap in tile space.** It kept pathfinding two-dimensional and simple, and it made the…
-* **0.48.0** THE IMPOSSIBLE SYNSEMBLE HOUSE, FIRST STOREY. Rooms stopped being bands under the building and became DISTRICTS, each at its own height, each placed for a reason written down in src/shared/districts.ts: storage descends two storeys as roots, providers lift off the ground because outside intelligence arrives at the edge, the studios hang three storeys up on nothing because creative work gets the…
 ## Trial
 
 Not open yet.
