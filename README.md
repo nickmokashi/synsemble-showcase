@@ -124,14 +124,14 @@ The core project is kept in a private repository while the software continues to
 
 ## What changed lately
 
-Current build: **0.43.0** (2026-08-24). Every release is smoke-tested against the real packaged app before it is kept.
+Current build: **0.48.0** (2026-08-25). Every release is smoke-tested against the real packaged app before it is kept.
 
+* **0.47.0** THE WORLD WAS NEVER CORRUPT. Measured on his data in the packaged binary rather than guessed at: 43 rooms, every coordinate finite. The building was 61 tiles wide and 106 TALL, and an isometric projection of a 1:2 shape IS a diagonal smear. Dynamic rooms lay in bands 52 wide and 12 rows tall and a new wing forced a new band at HALF full, so it grew a hundred rows deep while using half its width -…
+* **0.46.0** THE WHOLE PROVIDER SURFACE. *"Fix EVERYTHING that has to do with providers. Assume that I'll add all of them."* An eighteen-rule audit over the entire catalogue, which found two gaps that would each have cost a session: fourteen providers had no balance explanation, and Save could still dead-end on a provider with no starter model. **Every address was checked against the real internet** (npm run…
+* **0.45.0** ONE PLACE, ONE KEY BOX. Two provider chooser dropdowns and two key fields existed, one pair for a single model and one for a free fleet, so he filled one in and pressed the other one's button and NVIDIA said "I need a key" with the key on screen. That is a trap, not a mistake. **Clicking a model did nothing visible**: it was working, but the id landed in a field inside the collapsed Details fold…
+* **0.44.0** TEST THE KEY, NOT THE BALANCE. He pressed Test on ElevenLabs and Deepgram and both cards said the key was refused. Both keys were fine. Asked directly, ElevenLabs served /v1/voices with that key and refused only /v1/user/subscription for want of user_read; Deepgram listed its projects and refused only the per-project balance, scope account:write. **Test was pointed at the balance**, so a working…
 * **0.39.0** EVERYTHING IS PLUGGED IN. *"I want the rest of it done."* The seven modules that were built, tested and had no caller now have one. **895 unit tests.**
 * **0.38.0** THE REST OF THE PACKET'S RULES. Four more subsystems, built in parallel, none of them stubs. **804 unit tests.**
-* **0.37.0** THE PACKET, FOUNDATIONS FIRST. He reaffirmed it: *"I need the whole packet completed. Absolutely. To a 'T'."* So four subsystems were built in parallel, all pure, all heavily tested, none of them stubs. **625 unit tests, 61 end-to-end checks.**
-* **0.35.0** notes you can actually use, and the updater that must never run during a test.
-* **0.34.0** a backend that does not tell the truth about itself poisons everything above it.
-* **0.32.0** the morning Nick tried to connect a provider, and eight things were in the way. Every one came from him using the app for ten minutes.
 ## Trial
 
 Not open yet.
