@@ -124,14 +124,14 @@ The core project is kept in a private repository while the software continues to
 
 ## What changed lately
 
-Current build: **0.61.0** (2026-08-28). Every release is smoke-tested against the real packaged app before it is kept.
+Current build: **0.62.1** (2026-08-28). Every release is smoke-tested against the real packaged app before it is kept.
 
+* **0.62.1** IT WAS ALREADY SIGNED IN, AND SIGNING IN NEVER NEEDED A TERMINAL. Nick: *"when I log back into Synsemble after it is closed or my computer resets, that it automatically logs into Claude Code. And Terminal doesn't pop up when I try to log in if it's logged out, regardless of whether it logged in on its own or not."*
 * **0.61.0** BODIES WALK, AND THE REC ROOM MEANS REST AGAIN. Nick: *"the agents are in the rec room and not in the rooms they are supposed to be in while working... if they are somewhere they are not supposed to be, something is wrong."* And: *"make it so they actually walk to where they are supposed to, not fly."*
 * **0.60.0** A SLOW BOOT MUST NOT COST HIM HIS PROVIDERS. Third time asking: *"None of the other providers are showing up as connected. I'm having a problem with this every time I restart my computer."*
 * **0.59.0** A LAPSED TOKEN IS NOT BEING SIGNED OUT. He had been typing /login most mornings. His credential holds an access token good for **eight hours** and a refresh token good for **a month** - ordinary OAuth, where the short one is meant to lapse constantly and the long one replaces it without anyone noticing. He should not have signed in again until 26 September.
 * **0.58.0** THE WORKSPACE CAN ASK. It had no tool bridge at all: prompt in, text out. Every capability it appeared to lack, it genuinely lacked, and every statement it made about its own limits was TRUE. Then it filled the gap the only way a text-only model can, by describing what it would have done as though it had done it.
 * **0.57.0** HE WAS SIGNED IN THE WHOLE TIME. Synsemble could not ask Claude Code whether it was signed in, so it said no, forever, and offered a terminal that could never change the answer.
-* **0.56.0** ONE DEAD ENDPOINT MUST NEVER STOP THE CHAT. A 404 now sends the work to the next model instead of ending the conversation, models that cannot hold a conversation are kept out of the chat fleet by family rather than by hoping their name says so, and a message may be handed to eight backends rather than four.
 ## Trial
 
 Not open yet.
