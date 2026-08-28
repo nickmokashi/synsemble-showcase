@@ -124,15 +124,15 @@ The core project is kept in a private repository while the software continues to
 
 ## What changed lately
 
-Current build: **0.58.0** (2026-08-27). Every release is smoke-tested against the real packaged app before it is kept.
+Current build: **0.59.0** (2026-08-28). Every release is smoke-tested against the real packaged app before it is kept.
 
+* **0.59.0** A LAPSED TOKEN IS NOT BEING SIGNED OUT. He had been typing /login most mornings. His credential holds an access token good for **eight hours** and a refresh token good for **a month** - ordinary OAuth, where the short one is meant to lapse constantly and the long one replaces it without anyone noticing. He should not have signed in again until 26 September.
 * **0.58.0** THE WORKSPACE CAN ASK. It had no tool bridge at all: prompt in, text out. Every capability it appeared to lack, it genuinely lacked, and every statement it made about its own limits was TRUE. Then it filled the gap the only way a text-only model can, by describing what it would have done as though it had done it.
 * **0.57.0** HE WAS SIGNED IN THE WHOLE TIME. Synsemble could not ask Claude Code whether it was signed in, so it said no, forever, and offered a terminal that could never change the answer.
 * **0.56.0** ONE DEAD ENDPOINT MUST NEVER STOP THE CHAT. A 404 now sends the work to the next model instead of ending the conversation, models that cannot hold a conversation are kept out of the chat fleet by family rather than by hoping their name says so, and a message may be handed to eight backends rather than four.
 * **0.55.0** DEEP RESEARCH, A MENU YOU CAN SEE, AND A CHAT THAT SURVIVES ITS OWN
   MODEL. Research that goes round more than once and keeps the disagreements, a shortcut menu so nothing needs a memorised command, Claude Code working from a real folder and never being the only thing that can answer, his own installed skills borrowed rather than ignored, and text you can select and copy. Eight fixes, and the…
 * **0.54.0** THE HOUSE CASTS ITS OWN SHADOW. Nick: *"get rid of the black silhouette that's shaped like a basic rectangle and make it look like an actual shadow."*
-* **0.53.0** ROOMS THAT LOOK LIKE THEIR JOB. The last gap in his brief: *"Rooms should no longer all look like identical colored trays. Their architecture, machinery, props, and shape should help communicate their purpose."*
 ## Trial
 
 Not open yet.
