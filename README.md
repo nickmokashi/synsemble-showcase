@@ -124,7 +124,7 @@ The core project is kept in a private repository while the software continues to
 
 ## What changed lately
 
-Current build: **0.59.0** (2026-08-28). Every release is smoke-tested against the real packaged app before it is kept.
+Current build: **0.60.0** (2026-08-28). Every release is smoke-tested against the real packaged app before it is kept.
 
 * **0.59.0** A LAPSED TOKEN IS NOT BEING SIGNED OUT. He had been typing /login most mornings. His credential holds an access token good for **eight hours** and a refresh token good for **a month** - ordinary OAuth, where the short one is meant to lapse constantly and the long one replaces it without anyone noticing. He should not have signed in again until 26 September.
 * **0.58.0** THE WORKSPACE CAN ASK. It had no tool bridge at all: prompt in, text out. Every capability it appeared to lack, it genuinely lacked, and every statement it made about its own limits was TRUE. Then it filled the gap the only way a text-only model can, by describing what it would have done as though it had done it.
