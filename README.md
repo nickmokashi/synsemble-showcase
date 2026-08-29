@@ -124,14 +124,15 @@ The core project is kept in a private repository while the software continues to
 
 ## What changed lately
 
-Current build: **0.63.0** (2026-08-29). Every release is smoke-tested against the real packaged app before it is kept.
+Current build: **0.65.0** (2026-08-29). Every release is smoke-tested against the real packaged app before it is kept.
 
+* **0.65.0** THE SAME BUG IN FOUR MORE STORES, AND A RULE THAT FAILS THE
+  BUILD. Nick: *"HOW CAN YOU KEEP THIS FROM HAPPENING AGAIN. I SHOULDN'T HAVE TO CONSULT YOU EVERY TIME TO SAVE MY PROVIDERS."*
+* **0.64.1** IT WAS DRAWING A STILL BUILDING SIXTY TIMES A SECOND. He asked for the machine problem to be fixed, so it was measured rather than reasoned about: **61.8% of one core at rest, on a four-core machine.** Renderer 29.2%, GPU 32%, main process 1.4%.
 * **0.63.0** PROVIDERS STOP DISAPPEARING, AND CAN NO LONGER BE DESTROYED. Nick: *"WHERE THE FUCK ARE ALL MY PROVIDERS AND HOW CAN YOU KEEP THIS FROM HAPPENING AGAIN."* Then, a minute later: *"I'M NOT SAYING THAT YOU NECESSARILY LOST THEM. I'M SAYING TO MAKE THEM STOP DISAPPEARING AND HAVING TO RESET TWICE A DAY."*
 * **0.62.1** IT WAS ALREADY SIGNED IN, AND SIGNING IN NEVER NEEDED A TERMINAL. Nick: *"when I log back into Synsemble after it is closed or my computer resets, that it automatically logs into Claude Code. And Terminal doesn't pop up when I try to log in if it's logged out, regardless of whether it logged in on its own or not."*
 * **0.61.0** BODIES WALK, AND THE REC ROOM MEANS REST AGAIN. Nick: *"the agents are in the rec room and not in the rooms they are supposed to be in while working... if they are somewhere they are not supposed to be, something is wrong."* And: *"make it so they actually walk to where they are supposed to, not fly."*
 * **0.60.0** A SLOW BOOT MUST NOT COST HIM HIS PROVIDERS. Third time asking: *"None of the other providers are showing up as connected. I'm having a problem with this every time I restart my computer."*
-* **0.59.0** A LAPSED TOKEN IS NOT BEING SIGNED OUT. He had been typing /login most mornings. His credential holds an access token good for **eight hours** and a refresh token good for **a month** - ordinary OAuth, where the short one is meant to lapse constantly and the long one replaces it without anyone noticing. He should not have signed in again until 26 September.
-* **0.58.0** THE WORKSPACE CAN ASK. It had no tool bridge at all: prompt in, text out. Every capability it appeared to lack, it genuinely lacked, and every statement it made about its own limits was TRUE. Then it filled the gap the only way a text-only model can, by describing what it would have done as though it had done it.
 ## Trial
 
 Not open yet.
