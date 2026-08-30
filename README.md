@@ -124,15 +124,15 @@ The core project is kept in a private repository while the software continues to
 
 ## What changed lately
 
-Current build: **0.65.0** (2026-08-29). Every release is smoke-tested against the real packaged app before it is kept.
+Current build: **0.66.0** (2026-08-30). Every release is smoke-tested against the real packaged app before it is kept.
 
+* **0.66.0** MINIMISED WAS NEVER THE COMMON CASE. BEHIND SOMETHING IS. Nick asked how the project was doing, was told one thing was still unmeasured, and said *"ok well then run what you need to run."* So it was measured on his own machine, on the running 0.65.0, while he worked in Word with Synsemble open behind it: **19.8%, 31.1% and 35.6% of one core** across three samples. The window was neither minimised…
 * **0.65.0** THE SAME BUG IN FOUR MORE STORES, AND A RULE THAT FAILS THE
   BUILD. Nick: *"HOW CAN YOU KEEP THIS FROM HAPPENING AGAIN. I SHOULDN'T HAVE TO CONSULT YOU EVERY TIME TO SAVE MY PROVIDERS."*
 * **0.64.1** IT WAS DRAWING A STILL BUILDING SIXTY TIMES A SECOND. He asked for the machine problem to be fixed, so it was measured rather than reasoned about: **61.8% of one core at rest, on a four-core machine.** Renderer 29.2%, GPU 32%, main process 1.4%.
 * **0.63.0** PROVIDERS STOP DISAPPEARING, AND CAN NO LONGER BE DESTROYED. Nick: *"WHERE THE FUCK ARE ALL MY PROVIDERS AND HOW CAN YOU KEEP THIS FROM HAPPENING AGAIN."* Then, a minute later: *"I'M NOT SAYING THAT YOU NECESSARILY LOST THEM. I'M SAYING TO MAKE THEM STOP DISAPPEARING AND HAVING TO RESET TWICE A DAY."*
 * **0.62.1** IT WAS ALREADY SIGNED IN, AND SIGNING IN NEVER NEEDED A TERMINAL. Nick: *"when I log back into Synsemble after it is closed or my computer resets, that it automatically logs into Claude Code. And Terminal doesn't pop up when I try to log in if it's logged out, regardless of whether it logged in on its own or not."*
 * **0.61.0** BODIES WALK, AND THE REC ROOM MEANS REST AGAIN. Nick: *"the agents are in the rec room and not in the rooms they are supposed to be in while working... if they are somewhere they are not supposed to be, something is wrong."* And: *"make it so they actually walk to where they are supposed to, not fly."*
-* **0.60.0** A SLOW BOOT MUST NOT COST HIM HIS PROVIDERS. Third time asking: *"None of the other providers are showing up as connected. I'm having a problem with this every time I restart my computer."*
 ## Trial
 
 Not open yet.
